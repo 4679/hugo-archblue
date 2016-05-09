@@ -1,0 +1,10 @@
+<div id="news">
+  <dl class="newslist">
+    {{ range where .Paginator.Pages "Params.hidden" "ne" "true" }}
+      <dt>{{ .Date.Format "2006-01-02" }}</dt>
+      <dd>
+        <a href="{{ .Permalink }}">{{ .Title }}</a>
+      </dd>
+    {{ end }}
+  </dl>
+</div>

@@ -1,0 +1,10 @@
+{{ partial "header.html" . }}
+{{ partial "navbar.html" . }}
+<div itemscope itemtype="http://schema.org/Article" class="news-article box">
+  <h2 itemprop="headline" align="left">{{ .Title }}</h2>
+  <p class="article-info" align="left">{{ .Date.Format "2006-01-02" }}{{ with .Site.Params.name }} - {{ . }}{{ end }}</p></br>
+  <div class="article-content" itemprop="articleBody" align="left">
+    {{ .Content }}
+  </div>
+</div>
+{{ partial "footer.html" . }}

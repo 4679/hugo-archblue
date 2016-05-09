@@ -1,0 +1,14 @@
+{{ partial "header.html" . }}
+{{ partial "navbar.html" . }}
+<div id="content">
+  <div id="content-left-wrapper">
+    <div id="content-left">
+      {{ partial "post-list.html" . }}
+      {{ partial "pagination.html" . }}
+      </br>
+    </div>
+  </div>
+  <div id="content-right">
+  {{ partial "search.html" . }}
+  {{ partial "links.html" . }}
+  {{ partial "footer.html" . }}
